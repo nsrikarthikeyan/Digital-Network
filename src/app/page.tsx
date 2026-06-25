@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import QuoteDialog from "@/components/QuoteDialog";
+import FloatingButtons from "@/components/FloatingButtons";
 import { Button } from "@/components/ui/button";
 import {
   Laptop,
@@ -844,6 +845,7 @@ export default function Home() {
         isOpen={isQuoteOpen}
         onClose={() => setIsQuoteOpen(false)}
       />
+      <FloatingButtons />
     </>
   );
 }
