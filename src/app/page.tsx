@@ -667,6 +667,7 @@ export default function Home() {
                 <h3 className="text-3xl sm:text-4xl font-black text-slate-900 leading-tight">
                   Building High-Trust Relationships in Karur
                 </h3>
+                <div className="hidden h-0.5 w-[1120px] rounded-full bg-gradient-to-r from-blue-600 via-blue-500/50 to-transparent lg:block" />
                 <p className="text-sm text-slate-655 leading-relaxed">
                   As an active member of BNI, Surya is committed to professional business ethics, punctuality, and verified quality standards. We believe in helping our business community thrive through reliable technology infrastructure.
                 </p>
@@ -695,7 +696,7 @@ export default function Home() {
               </div>
 
               {/* Right Column: Values grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:mt-48">
                 <div className="p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
                   <h4 className="text-lg font-bold text-slate-900">Good Pricing</h4>
                   <p className="text-xs text-slate-600 leading-relaxed">

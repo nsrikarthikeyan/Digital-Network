@@ -34,7 +34,7 @@ const InstagramIcon = () => (
 export default function Header({
   onOpenQuote,
 }: {
-  onOpenQuote: () => void;
+  onOpenQuote?: () => void;
 }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -50,12 +50,14 @@ export default function Header({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleOpenQuote = onOpenQuote ?? (() => undefined);
+
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About Us", href: "#about" },
-    { label: "Products", href: "#products" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Products", href: "/products" },
+    { label: "Services", href: "/services" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   const socialLinks = [
@@ -96,7 +98,7 @@ export default function Header({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="focus:outline-none">
+          <a href="/" className="focus:outline-none">
             <Logo />
           </a>
 
@@ -140,7 +142,7 @@ export default function Header({
               <span>9894740202</span>
             </a>
             <button
-              onClick={onOpenQuote}
+              onClick={handleOpenQuote}
               className="h-11 px-6 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full shadow-md shadow-blue-600/20 border-0 hover:scale-[1.03] transition-all flex items-center justify-center cursor-pointer outline-none text-sm"
             >
               Request Quote
@@ -209,7 +211,7 @@ export default function Header({
                     <span className="font-bold">9894740202</span>
                   </a>
                   <button
-                    onClick={onOpenQuote}
+                    onClick={handleOpenQuote}
                     className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md border-0 flex items-center justify-center cursor-pointer transition-colors"
                   >
                     Request Quote
