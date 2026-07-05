@@ -3,9 +3,11 @@ import React from "react";
 interface LogoProps {
   className?: string;
   iconOnly?: boolean;
+  width?: number;
+  height?: number;
 }
 
-export default function Logo({ className = "", iconOnly = false }: LogoProps) {
+export default function Logo({ className = "", iconOnly = false, width = 120, height = 60 }: LogoProps) {
   if (iconOnly) {
     return (
       <div className={`relative overflow-hidden w-[38px] h-[38px] flex-shrink-0 select-none ${className}`}>
