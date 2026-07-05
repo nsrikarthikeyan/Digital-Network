@@ -19,12 +19,12 @@ export default function Logo({ className = "", iconOnly = false }: LogoProps) {
   }
 
   return (
-    <div className={`relative select-none ${className}`} style={{ width: "155px", height: "75px" }}>
+    <div className={`relative select-none ${className}`} style={{ width: "120px", height: "60px" }}>
       <img
         src="/logo.png"
         alt="Digital Network Logo"
-        width={155}
-        height={75}
+        width={130}
+        height={60}
         className="w-full h-full object-contain"
       />
     </div>

@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import { Phone, Menu, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -57,7 +56,7 @@ export default function Header({
     { label: "About Us", href: "/about" },
     { label: "Products", href: "/products" },
     { label: "Services", href: "/services" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const socialLinks = [

@@ -24,9 +24,17 @@ export default function AboutPage() {
               <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">
                 About Digital Network
               </h1>
-              <p className="max-w-2xl text-lg leading-8 text-slate-600">
-                We are a Karur-based IT partner helping businesses buy, install and maintain dependable technology with honest guidance and long-term support.
-              </p>
+              <div className="space-y-4 max-w-2xl text-lg leading-8 text-slate-600">
+                <p>
+                  We are a Karur-based IT partner helping businesses buy, install and maintain dependable technology with honest guidance and long-term support.
+                </p>
+                <p>
+                  Since 2007, Digital Network has helped small offices, retail shops, schools and growing teams modernize their IT systems with desktops, laptops, printers, servers, secure networks, and cloud-enabled email.
+                </p>
+                <p>
+                  Our team combines local expertise with authorized multi-brand service, clear pricing, and fast response so your hardware stays reliable and your operations keep moving.
+                </p>
+              </div>
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => setIsQuoteOpen(true)}
@@ -52,6 +60,63 @@ export default function AboutPage() {
                   "18+ years of practical IT experience",
                   "Authorized multi-brand sales and service support",
                   "Fast response for office upgrades and urgent repairs",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50 p-3">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 text-blue-600" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                What we do for your business
+              </h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+                We help companies of all sizes choose the right technology, install it properly, and keep it working with dependable service and support.
+              </p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    title: "Hardware procurement",
+                    description: "Desktops, laptops, servers, printers and accessories from authorized brands with honest pricing.",
+                  },
+                  {
+                    title: "Network & security",
+                    description: "Office networking, firewalls, Wi-Fi setup and secure connectivity for business continuity.",
+                  },
+                  {
+                    title: "Cloud & email",
+                    description: "Domain setup, G Suite email, backup planning and cloud readiness for growing teams.",
+                  },
+                  {
+                    title: "Repairs & maintenance",
+                    description: "Fast repair, on-site service and annual maintenance agreements to reduce downtime.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+                    <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/60">
+              <h3 className="text-2xl font-bold text-slate-900">Our commitment</h3>
+              <p className="mt-4 text-sm leading-7 text-slate-600">
+                We focus on clarity, reliability and long-term relationships. Our goal is to make your IT simple, stable, and easy to manage so you can concentrate on running your business.
+              </p>
+              <div className="mt-6 space-y-4 text-sm text-slate-600">
+                {[
+                  "Transparent quotes with no hidden costs.",
+                  "Quick service response for upgrades and repairs.",
+                  "Local support that understands Karur businesses.",
+                  "A consistent partner for technology and office IT needs.",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50 p-3">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 text-blue-600" />

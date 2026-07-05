@@ -17,8 +17,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand Info */}
           <div className="md:col-span-2">
-            <div className="bg-white rounded-2xl p-6 mb-8 w-fit">
-              <Logo className="w-auto h-auto" />
+            <div className="bg-white rounded-[28px] px-1 py-2 mb-4 inline-flex shadow-lg shadow-slate-950/10">
+              <Logo width={140} height={60} className="w-auto h-auto" />
             </div>
             <p className="text-sm text-gray-400 mb-6 max-w-sm">
               Your one-stop multi-brand destination for top-tier desktop computers, laptops, servers, enterprise network solutions, G Suite email management, and expert repair services in Karur.
