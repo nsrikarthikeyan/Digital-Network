@@ -23,7 +23,7 @@ export default function Logo({ className = "", iconOnly = false }: LogoProps) {
       <img
         src="/logo.png"
         alt="Digital Network Logo"
-        width={130}
+        width={120}
         height={60}
         className="w-full h-full object-contain"
       />
